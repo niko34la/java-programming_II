@@ -3,6 +3,7 @@ import java.util.Scanner;
 public class Main {
 	public static void main(String[] args) {
 
+		Entity en = new Entity();
 		Scanner input = new Scanner(System.in);
 		System.out.println("What kind of database would you like to create?");
 		String name = input.next();
@@ -16,12 +17,26 @@ public class Main {
 		}
 		Columns.setCols(colname);
 		System.out.printf("%s\n", Columns.getCols());
+		System.out.println("Declare a primary key");
+		boolean accept = false;
+		do {
+			String primk = input.next();
+			for(int i= 0; i < colname.length; i++) {
+				if(primk.equals(colname[i])) {
+					en.setPK(primk,i);
+					accept = true;
+					break;
+				}
+			}
+		} while(!accept);
+		Menu menu = new Menu();
 		String[] elements = new String[columns];
+		System.out.println("Insert the elements");
 		for (int i = 0; i < columns ; i++) {
 			elements[i] = input.next();
 		}
-		Entity en = new Entity();
+
 		en.setter(elements);
-		System.out.printf("%s\n",en.getter());
+		en.printEls(en.getter());
 	}
 }
