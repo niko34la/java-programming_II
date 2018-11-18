@@ -1,12 +1,12 @@
 import java.util.Scanner;
 public class Menu implements Choice {
 	Scanner input = new Scanner(System.in);
-	Entity en = new Entity();
+
 
 	@Override
-	public int enter_data(Entity en, String[] els) {
-		en.setter(els);
-		return 1;
+	public Entity enter_data(String[] els) {
+		Entity en = new Entity(els);
+		return en;
 	}
 
 	@Override

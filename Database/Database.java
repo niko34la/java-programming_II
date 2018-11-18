@@ -17,7 +17,9 @@ public class Database {
 	}
 
 	public static void printDB() {
-		System.out.println(arr1.toArray());
+		for(Entity en : arr1) {
+			en.printEn();
+		}
 	}
 
 	public void removeEnt(int i) {

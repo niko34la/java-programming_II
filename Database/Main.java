@@ -30,13 +30,36 @@ public class Main {
 			}
 		} while(!accept);
 		Menu menu = new Menu();
-		String[] elements = new String[columns];
-		System.out.println("Insert the elements");
-		for (int i = 0; i < columns ; i++) {
-			elements[i] = input.next();
+		menu.printMenu();
+		for(int i= 0; i<5;i++) {
+			String[] elements = new String[columns];
+			System.out.println("Insert the elements");
+			for (int j = 0; j < columns ; j++) {
+				elements[j] = input.next();
+			}
+			menu.enter_data(elements);
+			Database db = new Database(menu.enter_data(elements));
+		}
+		Database.printDB();
+		int choice = input.nextInt();
+		switch(choice) {
+		case 1:
+			String[] elements = new String[columns];
+			System.out.println("Insert the elements");
+			for (int i = 0; i < columns ; i++) {
+				elements[i] = input.next();
+			}
+			menu.enter_data(elements);
+			Database db = new Database(menu.enter_data(elements));
+		case 2:
+
+		case 3:
+
+		case 4:
+
 		}
 
-		en.setter(elements);
-		en.printEls(en.getter());
+
+
 	}
 }

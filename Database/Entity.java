@@ -25,12 +25,16 @@ public class Entity {
 
 	public void printEls(ArrayList<String> col) {
 		for(String s: col) {
-			System.out.print(s );
+			System.out.print("" +s +"   ");
 		}
 	}
 	public void setPK(String s, int i) {
 		primary_key = s;
 		primarykey_location = i;
+	}
+
+	public void printEn() {
+		System.out.println(col);
 	}
 
 	public static int getPKL() {
