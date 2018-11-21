@@ -8,7 +8,7 @@ public class Columns {
   /**
   *Adding elements.
   */
-  
+
   public static void setCols(String[] col) {
     for (int i = 0; i < col.length; i++) {
       cols.add(i,col[i]);
@@ -17,6 +17,18 @@ public class Columns {
 
   public static ArrayList<String> getCols() {
     return cols;
+  }
+
+  /**
+ * Method: colIndex.
+ */
+  public static int colIndex(String in) {
+    for (String s : cols) {
+      if (in.equals(s)) {
+        return cols.indexOf(s);
+      }
+    }
+    return -1;
   }
 
 }

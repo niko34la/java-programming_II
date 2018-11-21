@@ -6,7 +6,7 @@ import org.apache.maven.java_programming_II.Entity;
 import org.apache.maven.java_programming_II.Menu;
 
 /**
- * Main class.
+ * Class: Main.
  *
  */
 
@@ -16,6 +16,9 @@ public class App {
   @SuppressWarnings("unused")
   private static String name;
   
+  /**
+ * Method: main.
+ */
   public static void main(String[] args) {
     Entity en = new Entity();
     input = new Scanner(System.in);
@@ -65,13 +68,14 @@ public class App {
         }
         menu.enter_data(elements);
         db = new Database(menu.enter_data(elements), choice);
-      
+        break;
+        
       case 2:
 
       case 3:
 
       case 4:
-    	  
+   
       default: 
 
     }

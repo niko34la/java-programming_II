@@ -1,23 +1,28 @@
 package org.apache.maven.java_programming_II;
+
 import java.util.ArrayList;
 
 public class Entity {
-  ArrayList<String> col = new ArrayList<String>();
+  ArrayList<String> ent = new ArrayList<String>();
   static int counter = 0;
-  public String primary_key;
+  public String primarykey;
   protected static int primarykey_location;
+
+  /**
+ * Method: setter.
+ */
   public void setter(String[] colu) {
     for (int i = 0; i < colu.length; i++) {
-      this.col.add(i, colu[i]);
+      this.ent.add(i, colu[i]);
       counter++;
     }
   }
 
   public ArrayList<String> getter() {
-    return col;
+    return ent;
   }
 
-  public Entity(String[] col){
+  public Entity(String[] col) {
     setter(col);
   }
 
@@ -25,19 +30,22 @@ public class Entity {
 
   }
 
+  /**
+   * Method: printEls.
+  */
   public void printEls(ArrayList<String> col) {
-    for(String s: col) {
-      System.out.print("" +s +"   ");
+    for (String s: col) {
+      System.out.print("" + s + "   ");
     }
   }
 
   public void setPk(String s, int i) {
-    primary_key = s;
+    primarykey = s;
     primarykey_location = i;
   }
 
   public void printEn() {
-    System.out.println(col);
+    System.out.println(ent);
   }
 
   public static int getPkL() {
@@ -45,7 +53,11 @@ public class Entity {
   }
 
   public String getS(int i) {
-    return col.get(i);
+    return ent.get(i);
+  }
+
+  public void changedt(int i,String s) {
+    ent.add(i,s);
   }
 
 }

@@ -22,4 +22,41 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+    <reporting>
+      <plugins>
+       <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>findbugs-maven-plugin</artifactId>
+        <version>3.0.6-SNAPSHOT</version>
+      </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>checkstyle-plugin</artifactId>
+          <version>3.0.0</version>
+          <reportSets>
+            <reportSet>
+              <reports>
+                <report>checkstyle</report>
+              </reports>
+            </reportSet>
+          </reportSets>
+        </plugin>
+          <plugin>
+           <artifactId>maven-compiler-plugin</artifactId>
+           <version>3.7.0</version>
+         </plugin>
+      </plugins>
+    </reporting>
+     <build>
+       <sourceDirectory>src/main</sourceDirectory>
+       <testSourceDirectory>src/test</testSourceDirectory>
+       <resources>
+         <resource>
+           <directory>src/resource</directory>
+           <excludes>
+             <exclude>**/*.java</exclude>
+           </excludes>
+         </resource>
+       </resources>
+     </build>
 </project>
