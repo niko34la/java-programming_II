@@ -9,7 +9,7 @@ public class Entity {
   public void setter(String[] colu) {
     for (int i = 0; i < colu.length; i++) {
       this.col.add(i, colu[i]);
-      Entity.counter = counter++;
+      counter++;
     }
   }
 
