@@ -37,7 +37,7 @@ public class App {
       String primk = input.next();
       for (int i = 0; i < colname.length; i++) {
         if (primk.equals(colname[i])) {
-          en.setPK(primk,i);
+          en.setPk(primk,i);
           accept = true;
           break;
         }

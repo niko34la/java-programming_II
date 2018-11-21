@@ -31,7 +31,7 @@ public class Entity {
     }
   }
 
-  public void setPK(String s, int i) {
+  public void setPk(String s, int i) {
     primary_key = s;
     primarykey_location = i;
   }
