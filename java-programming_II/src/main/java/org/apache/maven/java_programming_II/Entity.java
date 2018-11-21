@@ -7,7 +7,7 @@ public class Entity {
   public String primary_key;
   protected static int primarykey_location;
   public void setter(String[] colu) {
-    for (int i =0; i < colu.length; i++) {
+    for (int i = 0; i < colu.length; i++) {
       this.col.add(i, colu[i]);
       Entity.counter = counter++;
     }
