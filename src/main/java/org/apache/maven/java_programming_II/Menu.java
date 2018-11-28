@@ -57,7 +57,6 @@ public class Menu implements Choice {
     }
   }
 
-  
   /**
  * Our menu.  
  */
