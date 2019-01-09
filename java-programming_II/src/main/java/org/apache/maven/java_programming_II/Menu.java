@@ -5,13 +5,13 @@ import java.util.Scanner;
 public class Menu implements Choice {
   Scanner input = new Scanner(System.in);
 
-  @Override
+
 public Entity enter_data(String[] els) {
     Entity en = new Entity(els);
     return en;
   }
 
-  @Override
+
   public int print_data(Database db) {
     Columns col = new Columns();
     col.printCols();
@@ -19,7 +19,7 @@ public Entity enter_data(String[] els) {
     return 2;
   }
 
-  @Override
+
   public int delete_data(Database db) {
     Delete d = new Delete();
     d.delMenu();
@@ -40,7 +40,7 @@ public Entity enter_data(String[] els) {
     }
   }
 
-  @Override
+
   public void change_data(Database db) {
     System.out.println("Enter the primary key of the entity you would like to modify");
     String old = input.next();
