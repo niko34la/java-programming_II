@@ -61,7 +61,7 @@ public class Columns {
   public static String checkType(int i, String checkstring) {
     input = new Scanner(System.in);
     if (types.get(i) == 1) {
-      while (Pattern.matches("[0-9]+",checkstring) == false) {
+      while (Pattern.matches("[0-9.,]+",checkstring) == false) {
         System.out.println("retype a numeric value");
         checkstring = input.nextLine();
       }

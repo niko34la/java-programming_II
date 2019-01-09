@@ -24,10 +24,10 @@ public Entity enter_data(String[] els) {
     Delete d = new Delete();
     d.delMenu();
     int ch;
-    /*do {*/
+    do {
      System.out.println("Type your choice");
      ch = input.nextInt();
-    /*} while (ch != 1 && ch != 2 && ch != 3);*/
+    } while (ch != 1 && ch != 2 && ch != 3);
     if (ch == 1) {
       d.del1(db);
       return 1;
